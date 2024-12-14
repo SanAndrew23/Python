@@ -1,10 +1,13 @@
 x = int(input())
 
+pos2 = x % 100
 pos = x % 10
 
-if pos == 1:
-    print('гриб')
+if 11 <= pos2 <= 19:
+    print('грибов')
 elif 2 <= pos <= 4:
     print('гриба')
-elif 5 <= pos <= 9 or pos == 0:
+elif pos == 1:
+    print('гриб')
+else:
     print('грибов')
