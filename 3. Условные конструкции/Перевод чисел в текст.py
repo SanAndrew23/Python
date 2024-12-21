@@ -18,6 +18,7 @@ match x1:
     case 5:
         strx1 = 'пять'
     case 6:
+
         strx1 = 'шесть'
     case 7:
         strx1 = 'семь'
