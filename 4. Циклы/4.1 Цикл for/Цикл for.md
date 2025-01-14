@@ -12,9 +12,9 @@ for переменная in последовательность:
 Перегрузки функции `range`:
 
 ```
-range(stop)
-range(start, stop)
-range(start, stop, step)
+range(stop) # 0 .. stop - 1
+range(start, stop) # start .. stop - 1
+range(start, stop, step) 
 ```
 
 `start` - начало последовательности\
