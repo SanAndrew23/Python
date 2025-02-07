@@ -1,7 +1,7 @@
 a = int(input())
 
 maxim = a
-kol = 0
+kol = 1
 
 while a != 0:
     a = int(input())
