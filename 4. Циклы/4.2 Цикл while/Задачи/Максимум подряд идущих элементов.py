@@ -1,17 +1,19 @@
 a = int(input())
 
-kol = 0
-kol_1 = 0
-maxim = 0
+kol = 1
+kol_1 = 1
+maxim = a
+maxim_2 = 1
 
 while a != 0:
     a = int(input())
     if a == maxim:
-        kol = kol+1
-    elif a > maxim:
-        maxim = a
+        kol +=1
+    elif a < maxim:
+        kol_1 = 1
+        maxim_2 = a
+    elif a == maxim_2:
         kol_1 += 1
-    if kol < kol_1:
-        maxim = kol_1
-    kol = 0
-print(maxim)
+if kol_1 > kol:
+    kol = kol_1
+print(kol)
