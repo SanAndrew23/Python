@@ -1,19 +1,17 @@
-a = int(input())
+max = 0
+posl = None
+cur = 0
 
-kol = 1
-kol_1 = 1
-maxim = a
-maxim_2 = 1
-
-while a != 0:
+while True:
     a = int(input())
-    if a == maxim:
-        kol +=1
-    elif a < maxim:
-        kol_1 = 1
-        maxim_2 = a
-    elif a == maxim_2:
-        kol_1 += 1
-if kol_1 > kol:
-    kol = kol_1
-print(kol)
+    if a == 0:
+        break
+    if posl is not None and a == posl:
+        cur += 1
+    else:
+        cur = 1
+    if cur > max:
+        max = cur
+    posl = a
+
+print(max)
