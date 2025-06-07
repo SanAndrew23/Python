@@ -1,16 +1,10 @@
-import sys
-
 lst = list(map(int, input().split()))
-max = -sys.maxsize
-min = sys.maxsize
-count = 0
-for i in lst:
-    count += 1
-    if i > max:
-        max = i
-        place_max = count
-    if i < min:
-        min = i
-        place_min = count
-del lst[place_max]
-del lst[place_min]
+max_pos = 0
+min_pos = 0
+for i in range(len(lst)):
+    if lst[i] > lst[max_pos]:
+        max_pos = i
+    if lst[i] < lst[min_pos]:
+        min_pos = i
+lst[min_pos], lst[max_pos] = lst[max_pos], lst[min_pos]
+print(lst)
