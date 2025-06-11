@@ -4,6 +4,5 @@ count = 0
 for i in lst:
     count += 1
     if x > i:
-        place = count
         break
-print(place)
+print(count)
