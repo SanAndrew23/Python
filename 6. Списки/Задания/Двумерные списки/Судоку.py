@@ -6,4 +6,4 @@ def is_correct(matrix):
     return True
 
 a = int(input())
-print(is_correct(list(map(int, input().split())) for i in range(a**2)))
+print(is_correct([list(map(int, input().split())) for i in range(a**2)]))

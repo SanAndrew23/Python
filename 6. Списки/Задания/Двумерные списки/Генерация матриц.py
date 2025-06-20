@@ -13,8 +13,8 @@ def chess_gen(row, col):
     return [[(j + i + 1) % 2 for j in range(col)] for i in range(row)]
 
 
-def Andrews_cross(row, col):
-    return [[1 if i == j or j == col - i - 1 else 0 for j in range(col)] for i in range(col)]
+def Andrews_cross(size):
+    return [[1 if i == j or j == size - i - 1 else 0 for j in range(size)] for i in range(size)]
 
 
 def quadrants(row, col):
