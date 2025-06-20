@@ -17,11 +17,11 @@ def Andrews_cross(row, col):
     return [[1 if i == j or j == col - i - 1 else 0 for j in range(col)] for i in range(col)]
 
 
-def cvadratants(row, col):
+def quadrants(row, col):
     return [[for j in range(col)] for i in range(col)]
 
 
-def vlogennie_squares(row, col):
+def nested_squares(row, col):
     return [[ for j in range(col)] for i in range(col)]
 
 
