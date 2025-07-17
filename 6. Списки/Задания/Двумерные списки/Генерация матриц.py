@@ -18,7 +18,7 @@ def Andrews_cross(size):
 
 
 def quadrants(row, col):
-    return [[for j in range(col)] for i in range(col)]
+    return [[ for j in range(col)] for i in range(col)]
 
 
 def nested_squares(row, col):
