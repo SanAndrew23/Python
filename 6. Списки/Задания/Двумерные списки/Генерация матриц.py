@@ -17,16 +17,16 @@ def Andrews_cross(size):
     return [[1 if i == j or j == size - i - 1 else 0 for j in range(size)] for i in range(size)]
 
 
-def quadrants(row, col):
-    return [[ for j in range(col)] for i in range(col)]
+def quadrants(size):
+    return [[0 if i == j  or j == size - 1 - i else 1 if j > i and j < size - i - 1 else 4 if j < i and j < size - i - 1 and i < size - 1 else 2 if j > i else 3 for j in range(size)] for i in range(size)]
 
 
 def nested_squares(row, col):
-    return [[ for j in range(col)] for i in range(col)]
+    return [[min(i, j, row - i - 1, col - j - 1) for j in range(col)] for i in range(row)]
 
 
 def spiral(row, col):
-    return [[ for j in range(col)] for i in range(col)]
+    return [[0 for j in range(col)] for i in range(row)]
 
 
-print_matrix(spiral(7, 7))
+print_matrix(nested_squares(6, 9))
