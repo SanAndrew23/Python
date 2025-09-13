@@ -49,4 +49,4 @@ def spiral(row, col):
     return matrix
 
 
-print_matrix(spiral(17, 19))
+print_matrix(spiral(3, 5))
