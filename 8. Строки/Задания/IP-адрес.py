@@ -1,0 +1,1 @@
+print('YES' if len(a := input().split('.')) == 4 and all(0 <= int(w) <= 255 for w in a) else 'NO')
