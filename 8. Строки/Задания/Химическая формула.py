@@ -15,6 +15,9 @@ for i in st[1:]:
         cur_element = i
     else:
         pred_element = 'е'
+    if pred_element == 'е':
+        if cur_element not in lst1:
+            f = False
     if cur_element == pred_element:
         f = False
     if pred_element in lst2 and cur_element in lst2:
