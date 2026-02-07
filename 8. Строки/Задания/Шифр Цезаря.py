@@ -12,10 +12,5 @@ def decode(st, key):
 
 st = input()
 key = int(input())
-'''alph = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-res = ''
-for i in st:
-    res += alph[(alph.find(i) + key) % len(alph)]
-print(res)'''
 print(encode(st, key))
 print(decode(st, key))

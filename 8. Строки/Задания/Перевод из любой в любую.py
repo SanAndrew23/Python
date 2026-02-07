@@ -9,15 +9,13 @@ def to_dec(num, base):
 
 
 def from_dec(num, base):
-    summ = ''
+    res = ''
     alph = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-    while num % base != 0:
-        summ += alph[num % base]
+    while num > 0:
+        res = alph[num % base] + res
         num //= base
-
-    summ = summ[::-1]
-    return summ
+    return res
 
 
 num = input()

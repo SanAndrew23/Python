@@ -1,18 +1,16 @@
 base = dict()
 count1 = int(input())
-file_comands = {'read': 'R', 'execute': 'X', 'write': 'W'}
+file_commands = {'read': 'R', 'execute': 'X', 'write': 'W'}
 
 for i in range(count1):
-    st = input()
-    file = st[:st.find(' ')]
-    comands = st[st.find(' ') + 1:]
-    base[file] = comands
+    parts = input().split()
+    base[parts[0]] = parts[1:]
 
 count2 = int(input())
 result = []
 for i in range(count2):
-    st1 = input()
-    if file_comands[st1[:st1.find(' ')]] in base[st1[st1.find(' ') + 1:]]:
+    parts = input().split()
+    if file_commands[parts[0]] in base[parts[1]]:
         result.append('OK')
     else:
         result.append('Access denied')
