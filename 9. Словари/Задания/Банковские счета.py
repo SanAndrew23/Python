@@ -28,6 +28,6 @@ for i in range(int(input())):
     if st[0] == 'INCOME':
         for name, sum in d.items():
             if sum > 0:
-                d[name] *= (1 + int(st[1]) / 100)
+                d[name] *= int((1 + int(st[1]) / 100))
 for i in res:
     print(i)
