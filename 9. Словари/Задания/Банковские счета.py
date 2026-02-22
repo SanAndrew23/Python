@@ -1,8 +1,10 @@
-d = dict() #name: cash
+from sys import stdin
+
+d = dict()
 do_commands = ['DEPOSIT', 'WITHDRAW']
 res = []
-for i in range(int(input())):
-    st = input().split()
+for line in stdin:
+    st = line.split()
     if st[0] in do_commands:
         name = st[1]
         if name not in d:
@@ -28,6 +30,7 @@ for i in range(int(input())):
     if st[0] == 'INCOME':
         for name, sum in d.items():
             if sum > 0:
-                d[name] *= int((1 + int(st[1]) / 100))
+                d[name] *= (1 + int(st[1]) / 100)
+                d[name] = int(d[name])
 for i in res:
     print(i)
